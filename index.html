@@ -6,37 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- A-Frame を読み込む -->
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <!-- AR.js を読み込む -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <title>test-box</title>
+  <script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+
+  <title>club-ar|情報デザイン</title>
 
   <!-- カメラの初期設定変更　これでみやすくなる？ -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
 </head>
 
-<body style="margin: 0; overflow: hidden">
 
+<body style="margin : 0px; overflow: hidden;">
   
-  <!-- A-FrameにAR.jsを紐づけ、VRボタン非表示、深度バッファ追加 -->
-  <a-scene embedded arjs vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
-
-    <!-- 3DCGモデルを読み込む -->
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+  >
+    <a-nft
+      type="nft"
+      url="https://arjs-cors-proxy.herokuapp.com/https://github.com/hsooooou/club_ar.github.io/blob/main/club_id"
+      smooth="true"
+      smoothCount="10" 
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
     <a-assets>
-      <a-asset-item id="box" src="./情報デザイン部ar.png"></a-asset-item>
+      <img id="nft" src="./情報デザイン部ar.png" />
     </a-assets>
-
-    <!-- マーカーの.pattファイルを読み込む -->
-    <a-marker type="pattern" url="./pattern-marker.patt">
-      <!-- 3Dモデルを呼び出す 表示設定-->
-      <a-img gltf-model="#box" scale="0.2 0.2 0.2"></a-img>
-    </a-marker>
-
-    <!-- カメラを追加 -->
+    </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
-
 </body>
 
 </html>
