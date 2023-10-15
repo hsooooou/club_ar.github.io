@@ -9,21 +9,22 @@
 
 <body style="margin : 0px; overflow: hidden;">
 
-  <!-- デバッグ用の画面表示、VR用のボタンをそれぞれ非表示に -->
-  <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-
-    <a-assets>
-      <img id="club-ar" src="./情報デザイン部ar.png" link="https://www.meiden.ed.jp/club/detail.html?id=359">
-    </a-assets>
-  
-    <!-- 今回作成した『.patt』ファイルを読み込む -->
-    <a-marker type="pattern" url="./pattern-QR_test_movie.patt">
-      <a-entity gltf-model="#club-ar" animation-mixer rotation="-90 0 0"></a-entity>
-    </a-marker>
-
+  <a-scene embedded arjs="debugUIEnabled:false;">
     <a-entity camera></a-entity>
 
-  </a-scene>
+    <!-- Markerを表示した際の処理を以下に記述する -->
+    <!-- ARマーカーのファイル名をここで指定する -->
+    <a-marker type="pattern" url="./pattern-QR_test_movie.patt">
+
+        <!-- 表示したい画像を src= ～ で指定する -->
+        <!-- 画像の大きさは width と height で設定可能 -->
+        <!-- 画像を表示させる位置は position で設定可能 -->
+        <!-- 画像を水平に表示させる場合は下記の rotation でOK -->
+        <a-image width="10" height="10" position="0.2 0.4 0.4" rotation="-90 0 0" src="./情報デザイン部ar.png">
+        </a-image>
+
+    </a-marker>
+</a-scene>
 
 </body>
 
