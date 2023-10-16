@@ -14,23 +14,23 @@
 
     <!-- Markerを表示した際の処理を以下に記述する -->
     <!-- ARマーカーのファイル名をここで指定する -->
-    <a-marker type="pattern" url="./pattern-QR_test_movie.patt">
+    <a-marker type="pattern" url="../patt/pattern-QR_test_movie.patt">
 
         <!-- 表示したい画像を src= ～ で指定する -->
         <!-- 画像の大きさは width と height で設定可能 -->
         <!-- 画像を表示させる位置は position で設定可能 -->
         <!-- 画像を水平に表示させる場合は下記の rotation でOK -->
-        <a-image width="4" height="2" position="0.2 0.4 0.4" rotation="-90 0 0" src="./情報デザイン部ar.png " >
+        <a-image width="4" height="2" position="0.2 0.4 0.4" rotation="-90 0 0" src="../img/情報デザイン部ar.png " >
         </a-image>
 
     </a-marker>
 
     <a-assets>
-      <a-asset-item id="seijitu" src="./seijitukinben.glb"></a-asset-item>
+      <a-asset-item id="seijitu" src="../glb/seijitukinben.glb"></a-asset-item>
     </a-assets>
 
     <!-- マーカーの.pattファイルを読み込む -->
-    <a-marker type="pattern" url="./pattern-marker.patt">
+    <a-marker type="pattern" url="../patt/pattern-marker.patt">
       <!-- 3Dモデルを呼び出す 表示設定-->
       <a-entity gltf-model="#seijitu" scale="0.2 0.2 0.2"></a-entity>
     </a-marker>
