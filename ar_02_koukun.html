@@ -24,6 +24,17 @@ x; overflow: hidden;">
       <a-entity gltf-model="#seijitu" scale="0.2 0.2 0.2"></a-entity>
     </a-marker>
 
+    
+    <a-assets>
+      <a-asset-item id="ninzu" src=".glb/ninnzuugurahu.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- マーカーの.pattファイルを読み込む -->
+    <a-marker type="pattern" url="./patt/pattern-ar_03_seito.patt">
+      <!-- 3Dモデルを呼び出す 表示設定はここ-->
+      <a-entity gltf-model="#ninzu" scale="0.2 0.2 0.2"></a-entity>
+    </a-marker>
+
     <a-entity light="type: ambient; color: #ffffff; intensity: 1.0" position="-1 1 0"></a-entity>
 </a-scene>
 
