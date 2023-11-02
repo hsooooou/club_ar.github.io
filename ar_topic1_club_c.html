@@ -3,11 +3,66 @@
 
 <head>
   <title>AR - Topic.1 | 部活動を探そう</title>
+
+  <style>
+    header {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+/*       padding: 0 40px; */
+      background: #efea3a;
+      box-sizing: border-box;
+    }
+    
+    ul {
+      list-style: none;
+    }
+
+    .header ul {
+      display: flex;
+      justify-content: flex-start;
+     /* padding-right:50px; */
+      
+
+    }
+
+    .header li {
+      display: inline-block;
+      padding-right: 30px;
+      font-family: 筑紫A丸ゴシック;
+      text-decoration-line: none;
+
+    }
+
+    .header a {
+        text-decoration: none;
+        color: #231815;
+    }
+  </style>
+  
   <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 </head>
 
+  
+
 <body style="margin : 0px; overflow: hidden;">
+
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="https://hsooooou.github.io/meiden-ar-vr.github.io/">ホーム</a></li>
+        <li><a href="https://hsooooou.github.io/meiden-ar-vr.github.io/school_facilities.html">学校MAP</a></li>
+        <li><a href="https://hsooooou.github.io/meiden-ar-vr.github.io/vr_ground.html">◀︎ No.8</a></li>
+        <li><a href="https://hsooooou.github.io/meiden-ar-vr.github.io/vr_kyoutoku.html">No.2 ▶︎</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  
 
   <a-scene embedded arjs="debugUIEnabled:false;">
     <a-entity camera></a-entity>
