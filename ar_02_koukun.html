@@ -13,6 +13,16 @@ x; overflow: hidden;">
   <a-scene embedded arjs="debugUIEnabled:false;" renderer="logarithmicDepthBuffer: true;">
     <a-entity camera></a-entity>
 
+     <a-assets>
+      <a-asset-item id="use" src="./glb/seijitu.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- マーカーの.pattファイルを読み込む -->
+    <a-marker type="pattern" url="./patt/pattern-ar_01_qr.patt">
+      <!-- 3Dモデルを呼び出す 表示設定-->
+      <a-entity gltf-model="#use" scale="0.4 0.4 0.4"></a-entity>
+    </a-marker>
+
     <!-- オブジェクトを指定 -->
     <a-assets>
       <a-asset-item id="seijitu" src="./glb/seijitu.glb"></a-asset-item>
