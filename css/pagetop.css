@@ -23,3 +23,7 @@ html {
   border-right: 5px solid #000;
   transform: translateY(20%) rotate(-45deg);
 }
+
+.pagetop {
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+}
